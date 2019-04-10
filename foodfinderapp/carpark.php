@@ -22,9 +22,10 @@ $json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?&la
 $json1 = json_decode($json);
 
 /*GET LOTS*/
+//  Add your own datamall key here
 $carparkLotsJson = "http://datamall2.mytransport.sg/ltaodataservice/CarParkAvailabilityv2";
 $ch = curl_init($carparkLotsJson );
-$options = array(CURLOPT_HTTPHEADER=>array("AccountKey: sNFhxLj1Ql6b0kC1fG7PMA==, Accept: application/json" ),);
+$options = array(CURLOPT_HTTPHEADER=>array("AccountKey:abc, Accept: application/json" ),);
 curl_setopt_array( $ch, $options );
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $carparkJsonResult = curl_exec( $ch );

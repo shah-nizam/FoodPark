@@ -11,12 +11,10 @@
 	// For localhost
 	$dbPassword = "";
 
-	// For Alicloud
-	//$dbPassword = "foobar123!";
-
 	$dbName = "foodfinderapp";
 
-	$googleKey = 'AIzaSyDAZ_xUtQbjc0-ua1GUYaYM8ZJ8wWF6CFo';
-	$datamallKey = 'sNFhxLj1Ql6b0kC1fG7PMA==';
+  # Add your google key and datamall key
+	$googleKey = '';
+	$datamallKey = '';
 
 	$conn = mysqli_connect($dbServer, $dbUserName, $dbPassword, $dbName);

@@ -13,9 +13,9 @@ $mail->SMTPSecure= "ssl"; // Used instead of TLS when only POP mail is selected
 $mail->Port = 465; // 465 Used instead of 587 when only POP mail is selected
 $mail->SMTPAuth = true;
 
-$mail->Username = "foodparkco@gmail.com"; // SMTP username
-$mail->Password = "foodpark123"; // SMTP password
-$mail->setFrom("foodparkco@gmail.com");  //add sender email address.
+$mail->Username = "abco@gmail.com"; // SMTP username
+$mail->Password = "abc"; // SMTP password
+$mail->setFrom("abc@gmail.com");  //add sender email address.
 $mail->AddAddress("$email");
 $mail->WordWrap = 50; // set word wrap
 
@@ -24,9 +24,9 @@ $mail->WordWrap = 50; // set word wrap
 $mail->IsHTML(true); // set email format to HTML
 $mail->Subject = 'Foodpark Reset Password Notification';
 
-        
+
 $message = 'Dear '.$firstName.',<br><br>
-        
+
 Your request to reset your password for your account has been received.<br><br>
 
 Please click this link below to reset your account password:<br>

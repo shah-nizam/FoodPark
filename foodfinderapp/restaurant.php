@@ -10,15 +10,15 @@ if(isset($_GET['foodEstablishmentId'])) {
   ?>
   <?php
 
-  // Editted SQL statement (Nizam)
   $foodID = $_GET['foodEstablishmentId'];
   $selectedFoodEstablishment = "SELECT name, address,image, RIGHT(address, 6) as postalcode,CAST(AVG(review.AvgRating) as decimal(18,1)), COUNT(review.AvgRating) FROM foodestablishment INNER JOIN review ON foodestablishment.foodestablishmentId = review.foodEstablishmentId WHERE foodestablishment.foodEstablishmentId = '".$_GET['foodEstablishmentId']."'";
   $result = mysqli_query($conn, $selectedFoodEstablishment) or die(mysqli_connect_error());
   $row = mysqli_fetch_array($result);
   $rating = $row[3];
   $numofreview = $row[5];
-https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyD0YpwB0Skqy44jarc2WPtg2CacjOkCgK4
-  $json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address=.' . $row['postalcode']. '&key=AIzaSyDAZ_xUtQbjc0-ua1GUYaYM8ZJ8wWF6CFo');
+
+  # Add your google key here
+  $json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address=.' . $row['postalcode']. '&key=abc');
   $json = json_decode($json);
   $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
   $long = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
@@ -57,7 +57,8 @@ https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Park
 
       $ch      = curl_init( $carparkLotsJson );
       $options = array(
-        CURLOPT_HTTPHEADER     => array( "AccountKey: sNFhxLj1Ql6b0kC1fG7PMA==, Accept: application/json" ),
+        # Add your datamall key here
+        CURLOPT_HTTPHEADER     => array( "AccountKey: abc, Accept: application/json" ),
       );
       curl_setopt_array( $ch, $options );
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -104,5 +105,6 @@ https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Park
 
     <?php include_once 'includes/footer_main.php' ?>
     <script type="text/javascript" src="js/lot-color.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAZ_xUtQbjc0-ua1GUYaYM8ZJ8wWF6CFo"></script>
+    # Add your google key here
+    <script src="https://maps.googleapis.com/maps/api/js?key=abc"></script>
     <?php include_once 'includes/restaurantMap_script.php' ?>

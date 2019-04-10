@@ -13,9 +13,10 @@ $mail->SMTPSecure= "ssl"; // Used instead of TLS when only POP mail is selected
 $mail->Port = 465; // 465 Used instead of 587 when only POP mail is selected
 $mail->SMTPAuth = true;
 
-$mail->Username = "foodparkco@gmail.com"; // SMTP username
-$mail->Password = "foodpark123"; // SMTP password
-$mail->setFrom("foodparkco@gmail.com");  //add sender email address.
+# Add your own email and password
+$mail->Username = "abc@gmail.com"; // SMTP username
+$mail->Password = "abc"; // SMTP password
+$mail->setFrom("abc@gmail.com");  //add sender email address.
 $mail->AddAddress("$email");
 $mail->WordWrap = 50; // set word wrap
 

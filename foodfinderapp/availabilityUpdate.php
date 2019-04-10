@@ -1,5 +1,5 @@
 <?php
-$datamallKey = 'SFHPvNC5RP+jFTzftMxxFQ==';
+$datamallKey = 'abc';
 $carparkLotsJson = "http://datamall2.mytransport.sg/ltaodataservice/CarParkAvailability";
 
 $ch      = curl_init($carparkLotsJson);

@@ -217,13 +217,6 @@ CREATE TABLE `feedback` (
   `carparkId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `feedback`
---
-
-INSERT INTO `feedback` (`feedbackId`, `accessibility`, `clean`, `parkRate`, `space`, `userFriendly`, `AvgRating`, `reviewResponse`, `userId`, `carparkId`) VALUES
-(2, 2, 3, 4, 5, 3, 3, 'weawe', 17, 23);
-
 -- --------------------------------------------------------
 
 --
@@ -23760,10 +23753,7 @@ CREATE TABLE `nonadmin` (
 --
 
 INSERT INTO `nonadmin` (`userId`) VALUES
-(8),
-(9),
-(17),
-(18);
+(1);
 
 -- --------------------------------------------------------
 
@@ -23784,24 +23774,6 @@ CREATE TABLE `review` (
   `foodEstablishmentId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `review`
---
-
-INSERT INTO `review` (`reviewId`, `quality`, `clean`, `comfort`, `ambience`, `service`, `AvgRating`, `reviewResponse`, `userId`, `foodEstablishmentId`) VALUES
-(1, 4, 3, 2, 1, 3, '2.60', 'Nice', 1, 1),
-(2, 3, 4, 3, 4, 3, '3.40', 'awdawdawd', 6, 2),
-(3, 4, 4, 5, 1, 5, '3.80', 'adwawdawd', 6, 1),
-(4, 5, 5, 5, 5, 5, '5.00', 'WOW!', 6, 8),
-(5, 3, 5, 2, 3, 4, '3.40', 'GOOD!', 6, 24),
-(6, 4, 4, 4, 4, 4, '4.00', 'Very nice', 6, 7),
-(7, 1, 1, 1, 1, 1, '1.00', 'Lousy', 6, 7744),
-(8, 3, 4, 4, 5, 4, '4.00', 'aw', 6, 12),
-(9, 4, 1, 4, 5, 4, '3.60', 'wad', 6, 3),
-(10, 5, 5, 5, 5, 5, '5.00', 'The well known Two Wings also has a stall here. Remember to show that you have a Pokeman Go account, where you will get a lucky dip which could be a discount or a free drink. Chicken Wings ($8.60/ 6 pieces) Topped with chilli crab ...', 9, 7913),
-(11, 4, 1, 4, 5, 4, '3.60', 'Food here is great! Will recommend to anybody!', 17, 5),
-(12, 4, 5, 2, 5, 3, '3.80', 'Amazing food, great place, 11/10 will recommend!', 18, 8),
-(13, 5, 5, 5, 5, 5, '5.00', 'I LOVE THIS PLACE!', 18, 7913);
 
 -- --------------------------------------------------------
 
@@ -23819,22 +23791,6 @@ CREATE TABLE `user` (
   `accountActivated` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userId`, `firstName`, `lastName`, `email`, `password`, `hash`, `accountActivated`) VALUES
-(1, 'Clement', 'Admin ', 'abc@email.com', '$2y$10$mIudNdh29hrwKURi.jxf8.UHJynVN1Hcrh4xcsX.RN.BXg2.o1Hny', '', 1),
-(2, 'Aaron', 'Tan ', 'def@email.com', '$2y$10$ioice7vXouAiIzkGQZ52q.rLv2HPbCO8soyKif1CND9E7Vhzbersa', '', 1),
-(3, 'Abel', 'Lim ', 'melvintan94@gmail.com', '$2y$10$jOoqxZul4gMP1eQlXhDTaeHTMKi7wum82fXJOlP5KFLXeQwZDZg7O', '', 0),
-(4, 's', 's', 'magnificentbluez@hotmail.com', '$2y$10$EjVEg0TAMJjouuPZ54H22efNbqDmZXrMr7l3MgQE/ORhPSJRnCd2m', '6766aa2750c19aad2fa1b32f36ed4aee', 1),
-(5, 'Peter', 'Tan', 'jtysjtys@gmail.com', '$2y$10$O6pe9D8hXwV24dIaz4rxJO4sGrNFai9DFAHyvjYusxMGWDeMRXhOO', 'd14220ee66aeec73c49038385428ec4c', 1),
-(6, 'clement', 'toh ', 'ctjs@gmail.com', '$2y$10$g8tsZj/nLeUY8MOQuqpXDeBfNdAyYzcMbx8QZ2KdDJ8CX/n6MgI.6', '', 1),
-(7, 'jeremt', 'te ', 'a@g.co', '$2y$10$fas3WRCOXNEP/J96aPt8Nexrl.aP.CvB7/oQ50./tea2LokJHxqNy', '', 0),
-(8, 'jeremy', 'waoejoaw ', 'jeremyteh8@gmail.com', '$2y$10$EWbqmLcJCndHwFXLh9pH.ufjcH/xTJO3TonTHTcFfrkzg0mfNdfiO', 'f57a2f557b098c43f11ab969efe1504b', 1),
-(9, 'John', 'Tan ', 'johntan@gmail.com', '$2y$10$Rny.2HEz4QtYA9DbMY5QnupTl0Kj3HPyIiTc9n9nJKsmqRroxHgQS', '', 1),
-(17, 'clerji', 'hwe ', 'ctjsctjs@gmail.com', '$2y$10$obRiykVpiTlHUGFoL3U1d.mDxosa3nqeeKaEO5LavV14R3oYABoL6', '02a32ad2669e6fe298e607fe7cc0e1a0', 1),
-(18, 'Big', 'Boss ', 'bigboss@gmail.com', '$2y$10$b1WHNA0eVA.ONCz5diRCUuuDYPqWcmuCoLYxbKU7CnXND1gAC8iV.', '6ea2ef7311b482724a9b7b0bc0dd85c6', 1);
 
 --
 -- Indexes for dumped tables

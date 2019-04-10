@@ -162,17 +162,6 @@ header('Location: 404.php');
 	</div>
 
 </div>
-<!--<section class="container">
-<div class="row">
-<div class="col-md-12">
-<ul class="section-header text-center favourites">
-<li style="display: inline"><a href="#foodEstablishment"><b>Food Establishment</b></a></li>
-<li style="display: inline"> | </li>
-<li style="display: inline"><a href="#carpark"><b>Carpark</b></a></li>
-<ul>
-</div>
-</div>
-<section>-->
 
 <?php include_once 'includes/footer_main.php' ?>
 <script type="text/javascript" src="js/resultsPage.js"></script>

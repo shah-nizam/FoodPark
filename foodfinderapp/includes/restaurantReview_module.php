@@ -2,7 +2,6 @@
   <?php
   if(isset($_GET['foodEstablishmentId'])) {
 
-    // Editted SQL statement (Nizam)
     $foodID = $_GET['foodEstablishmentId'];
     $checkReview = "SELECT COUNT(*) FROM review WHERE review.foodEstablishmentId = ".$_GET['foodEstablishmentId']." AND review.userId = ".$_SESSION['ID'];
 
@@ -46,7 +45,7 @@
           echo "Added to new review";
         } else {
           echo "Error: " . $sql . "<br>" . $conn->error;
-          
+
         }
       }
       echo "<meta http-equiv='refresh' content='0;url=restaurant.php?foodEstablishmentId=".$_GET['foodEstablishmentId']."'>";
