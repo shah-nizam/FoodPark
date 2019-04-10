@@ -11,8 +11,8 @@ Technologies used:
 5. LTA Datamall API
 
 # Things to note
-Google and LTA Datamall API key are removed
+Google and LTA Datamall API keys are removed
 
-PHPMailer email and password are removed
+Email credentials are removed
 
 Please add your own key and credentials
