@@ -9,3 +9,9 @@ Technologies used:
 3. MySQL
 4. Google API
 5. LTA Datamall API
+
+# Things to note
+Google and LTA Datamall API key are removed
+PHPMailer email and password are removed
+
+Please add your own key and credentials
